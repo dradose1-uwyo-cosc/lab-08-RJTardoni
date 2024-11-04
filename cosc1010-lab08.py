@@ -97,3 +97,34 @@ print("*" * 75)
     # If the number you are trying to take the square root of is negative, return null
 #use function from the first part to write in the third part, and only break the loop when exit from the user
 
+
+
+def quadratic(a,b,c):
+    """parameters the quadratic formula"""
+    a_number = check_float_or_int(a)
+    b_number = check_float_or_int(b)
+    c_number = check_float_or_int(c) 
+    x_array= []
+    if (a_number and b_number and c_number):
+        
+            x= (-b_number +-  (b**-(4*a_number*c_number)))/(2*a_number)
+            x_array.append(x)
+            return x_array
+    
+    else:
+        print("Invalid number")
+
+
+
+while True:
+    a=input("Type a value for a")
+    if (a=="exit"):
+        break
+    b=input("Type a value for b")
+    if (b=="exit"):
+        break
+    c=input("Type a value for c")
+    if (c=="exit"):
+        break
+   
+    print(quadratic(a,b,c))
