@@ -97,7 +97,9 @@ print("*" * 75)
     # If the number you are trying to take the square root of is negative, return null
 #use function from the first part to write in the third part, and only break the loop when exit from the user
 
-
+ def sqrt (a,b,c)
+            """square root"""
+            discriminant = (b_number*b_number-4*a_number*c_number)
 
 def quadratic(a,b,c):
     """parameters the quadratic formula"""
@@ -106,7 +108,8 @@ def quadratic(a,b,c):
     c_number = check_float_or_int(c) 
     x_array= []
     if (a_number and b_number and c_number):
-        
+    
+            discriminant = (b_number*B
             x= (-b_number +-  (b**-(4*a_number*c_number)))/(2*a_number)
             x_array.append(x)
             return x_array
