@@ -1,8 +1,8 @@
-# Your Name Here
+# RJ Tardoni
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section:
+# Submission Date 11/04/2024
+# Lab 08
+# Lab Section: 14
 # Sources, people worked with, help given to:
 # your
 # comments
@@ -13,6 +13,21 @@
 # If they can't be converted return false
 # Other wise return the converted int or float 
 # Floats should only have one decimal point in them 
+
+
+
+def check_float_or_int (string_to_check):
+    """A function to check for int or float"""
+    returnValue = False
+    try:
+        returnValue = float (string_to_check)
+        returnValue = int(string_to_check)
+    except:
+        pass
+    return returnValue
+
+print(check_float_or_int("12.5") )
+print(check_float_or_int("-12"))
 
 
 print("*" * 75)
@@ -38,6 +53,38 @@ print("*" * 75)
 # Remember all inputs are strings, but the function needs ints or floats
 # Call your function and print the resulting list
 
+def slope_intercept(m,b,a,an):
+    """parameters for a slope intercept"""
+    m_number = check_float_or_int(m)
+    b_number = check_float_or_int(b)
+    a_number = check_float_or_int(a) 
+    an_number = check_float_or_int(an)
+    y_array= []
+    if (m_number and b_number and a_number and an_number):
+
+        for x in range(a_number,an_number):
+            y = m_number * x + b_number
+            y_array.append(y)
+        return y_array
+    
+    else:
+        print("Invalid number")
+    
+while True:
+    m=input("Type a value for m")
+    if (m=="exit"):
+        break
+    b=input("Type a value for b")
+    if (b=="exit"):
+        break
+    a=input("Type a value for a")
+    if (a=="exit"):
+        break
+    an=input("Type a value for an") 
+    if (an=="exit"):
+        break
+    print(slope_intercept(m,b,a,an))
+
 print("*" * 75)
 
 
@@ -48,3 +95,5 @@ print("*" * 75)
 # Create a loop like above to prompt the user for input for the three values
 # Create a second function that just does the square root operation 
     # If the number you are trying to take the square root of is negative, return null
+#use function from the first part to write in the third part, and only break the loop when exit from the user
+
