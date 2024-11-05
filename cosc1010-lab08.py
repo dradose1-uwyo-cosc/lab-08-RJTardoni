@@ -113,7 +113,7 @@ def quadratic(a,b,c):
     if (a_number and b_number and c_number):
     
          
-            x= (-b_number +-  (b**-(4*a_number*c_number)))/(2*a_number)
+            x= (-b_number +-  (discriminant))/(2*a_number)
             x_array.append(x)
             return x_array
     
