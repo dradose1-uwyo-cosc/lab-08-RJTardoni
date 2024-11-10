@@ -104,9 +104,11 @@ def sqrt (a,b,c):
     c_number = check_float_or_int(c) 
     discriminant = []
     if (a_number and b_number and c_number):
-        discrim = (b_number*b_number-4*a_number*c_number)
+        discrim = (b_number*b_number-4*a_number*c_number)** 0.5
+    
         discriminant.append(discrim)
-        return discriminant
+        return discrim
+        
     else:
         print("Invalid number")
 
@@ -116,12 +118,14 @@ def quadratic(a,b,c):
     b_number = check_float_or_int(b)
     c_number = check_float_or_int(c) 
     x_array= []
+    s=sqrt (a,b,c)
     if (a_number and b_number and c_number):
     
          
-            x= (-b_number +-  (discriminant))/(2*a_number)
-            x_array.append(x)
-            return x_array
+        x= (-b_number + (s)/(2*a_number))
+        x= (-b_number - (s)/(2*a_number))
+        x_array.append(x)
+        return x_array
     
     else:
         print("Invalid number")
